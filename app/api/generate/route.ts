@@ -24,7 +24,7 @@ export async function POST(req: Request) {
       response_format: "url",
       prompt: "YOUR_PROMPT",
     });
-    console.log("Image generated", response.data[0].url);
+
     return NextResponse.json({ imageUrl: response.data[0].url });
   } catch (error: any) {
     console.error("Error generating image:", error);

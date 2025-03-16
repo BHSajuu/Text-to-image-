@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     const response = await client.images.generate({
       model: "black-forest-labs/flux-dev",
       response_format: "url",
-      prompt: "YOUR_PROMPT",
+      prompt: prompt,
     });
 
     return NextResponse.json({ imageUrl: response.data[0].url });
